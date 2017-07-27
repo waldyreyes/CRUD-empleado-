@@ -1,6 +1,6 @@
 ﻿namespace crud_empleado_o_modificar_etc
 {
-    partial class Form1
+    partial class frmBusquedaEmpleado
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -59,6 +59,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(277, 20);
             this.txtBuscar.TabIndex = 1;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // btnbuscar
             // 
@@ -143,7 +144,7 @@
             this.btnCrear.UseVisualStyleBackColor = true;
             this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
-            // Form1
+            // frmBusquedaEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -157,7 +158,7 @@
             this.Controls.Add(this.rbtnCodEMp);
             this.Controls.Add(this.btnbuscar);
             this.Controls.Add(this.txtBuscar);
-            this.Name = "Form1";
+            this.Name = "frmBusquedaEmpleado";
             this.Text = "busqueda";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).EndInit();

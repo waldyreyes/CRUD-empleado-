@@ -64,8 +64,8 @@ namespace crud_empleado_o_modificar_etc
             {
                 Operacion op = new Operacion();
                 // txtCodigo.ReadOnly = false;
-               // op.ConsultaConResultado("UPDATE empleados SET cedula = '" + txtCedula.Text + "', nombre = '" + txtNombre.Text + "', apellido = '" + txtApellido.Text + "', direccion = '" + txtDireccion.Text + "' sexo = '" + cmbSexo.Text + "' sueldo = '" + txtSalario.Text + "' fecha_nacimiento = '" + txtFechaNacimiento.Text + "' fecha_ingreso = '" + txtFechaIngreso.Text + "' cod_cargo = '" + txtCodigoDelCargo.Text + "' WHERE cod_empleado =  '" + txtCodigo.Text + "' ");
-                op.ConsultaConResultado("UPDATE empleados SET (cedula, nombre, apellido, direccion, sexo, sueldo, fecha_nacimiento, fecha_ingreso, cod_cargo) VALUES('" + txtCedula.Text + "', '" + txtNombre.Text + "', '" + txtApellido.Text + "', '" + txtDireccion.Text + "', '" + cmbSexo.Text + "', '" + txtSalario.Text + "', '" + txtFechaNacimiento.Text + "','" + txtFechaIngreso.Text + "', '" + txtCodigoDelCargo.Text + "'WHERE cod_empleado = '"+ txtCodigo.Text +"')");
+                op.ConsultasSinResultados ("UPDATE empleados SET cedula = '" + txtCedula.Text + "', nombre = '" + txtNombre.Text + "', apellido = '" + txtApellido.Text + "', direccion = '" + txtDireccion.Text + "' sexo = '" + cmbSexo.Text + "' sueldo = '" + txtSalario.Text + "' fecha_nacimiento = '" + txtFechaNacimiento.Text + "' fecha_ingreso = '" + txtFechaIngreso.Text + "' cod_cargo = '" + txtCodigoDelCargo.Text + "' WHERE cod_empleado LIKE '%" + txtCodigo.ToString() + "%' ");
+               // op.ConsultasSinResultados("UPDATE empleados SET (cedula, nombre, apellido, direccion, sexo, sueldo, fecha_nacimiento, fecha_ingreso, cod_cargo) VALUES('" + txtCedula.Text + "', '" + txtNombre.Text + "', '" + txtApellido.Text + "', '" + txtDireccion.Text + "', '" + cmbSexo.Text + "', '" + txtSalario.Text + "', '" + txtFechaNacimiento.Text + "','" + txtFechaIngreso.Text + "', '" + txtCodigoDelCargo.Text + "'WHERE cod_empleado LIKE '%"+ txtCodigo.Text +"%')");
             }
             else
             {
@@ -176,7 +176,7 @@ namespace crud_empleado_o_modificar_etc
         {
             
             Operacion op = new Operacion();
-            Form1 emp = new Form1();
+            frmBusquedaEmpleado emp = new frmBusquedaEmpleado();
 
             if (MessageBox.Show("SEGURO QUE DESEA ELIMINAR ESTE REGISTRO?", "ELIMINAR ", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
             {

@@ -129,9 +129,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(5, 115);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 17);
+            this.label4.Size = new System.Drawing.Size(60, 17);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Apellido";
+            this.label4.Text = "Apellidos";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // groupBox1
@@ -171,7 +171,7 @@
             this.txtFechaIngreso.Mask = "00/00/0000";
             this.txtFechaIngreso.Name = "txtFechaIngreso";
             this.txtFechaIngreso.Size = new System.Drawing.Size(232, 24);
-            this.txtFechaIngreso.TabIndex = 114;
+            this.txtFechaIngreso.TabIndex = 7;
             this.txtFechaIngreso.ValidatingType = typeof(System.DateTime);
             // 
             // txtFechaNacimiento
@@ -180,7 +180,7 @@
             this.txtFechaNacimiento.Mask = "00/00/0000";
             this.txtFechaNacimiento.Name = "txtFechaNacimiento";
             this.txtFechaNacimiento.Size = new System.Drawing.Size(232, 24);
-            this.txtFechaNacimiento.TabIndex = 113;
+            this.txtFechaNacimiento.TabIndex = 6;
             this.txtFechaNacimiento.ValidatingType = typeof(System.DateTime);
             // 
             // txtCedula
@@ -189,7 +189,7 @@
             this.txtCedula.Mask = "000-0000000-0";
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(232, 24);
-            this.txtCedula.TabIndex = 112;
+            this.txtCedula.TabIndex = 1;
             // 
             // cmbSexo
             // 
@@ -301,7 +301,7 @@
             this.txtSalario.Location = new System.Drawing.Point(133, 23);
             this.txtSalario.Name = "txtSalario";
             this.txtSalario.Size = new System.Drawing.Size(232, 24);
-            this.txtSalario.TabIndex = 15;
+            this.txtSalario.TabIndex = 9;
             // 
             // label8
             // 
@@ -332,7 +332,7 @@
             this.btnCalcularAntiguedad.Location = new System.Drawing.Point(304, 63);
             this.btnCalcularAntiguedad.Name = "btnCalcularAntiguedad";
             this.btnCalcularAntiguedad.Size = new System.Drawing.Size(139, 34);
-            this.btnCalcularAntiguedad.TabIndex = 11;
+            this.btnCalcularAntiguedad.TabIndex = 13;
             this.btnCalcularAntiguedad.Text = "Calcular Antiguedad";
             this.btnCalcularAntiguedad.UseVisualStyleBackColor = true;
             this.btnCalcularAntiguedad.Click += new System.EventHandler(this.btnCalcularAntiguedad_Click);
@@ -342,7 +342,7 @@
             this.btnCalcularEdad.Location = new System.Drawing.Point(304, 23);
             this.btnCalcularEdad.Name = "btnCalcularEdad";
             this.btnCalcularEdad.Size = new System.Drawing.Size(139, 34);
-            this.btnCalcularEdad.TabIndex = 10;
+            this.btnCalcularEdad.TabIndex = 11;
             this.btnCalcularEdad.Text = "Calcular Edad";
             this.btnCalcularEdad.UseVisualStyleBackColor = true;
             this.btnCalcularEdad.Click += new System.EventHandler(this.btnCalcularEdad_Click);
@@ -353,7 +353,7 @@
             this.txtAntiguedad.Location = new System.Drawing.Point(66, 69);
             this.txtAntiguedad.Name = "txtAntiguedad";
             this.txtAntiguedad.Size = new System.Drawing.Size(232, 24);
-            this.txtAntiguedad.TabIndex = 101;
+            this.txtAntiguedad.TabIndex = 12;
             // 
             // txtEdad
             // 
@@ -361,7 +361,7 @@
             this.txtEdad.Location = new System.Drawing.Point(66, 29);
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(232, 24);
-            this.txtEdad.TabIndex = 100;
+            this.txtEdad.TabIndex = 10;
             // 
             // btnGuardar
             // 
@@ -369,7 +369,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(122, 516);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 13;
+            this.btnGuardar.TabIndex = 15;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -379,7 +379,7 @@
             this.btnImprimir.Location = new System.Drawing.Point(338, 516);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(75, 23);
-            this.btnImprimir.TabIndex = 15;
+            this.btnImprimir.TabIndex = 17;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = true;
             // 
@@ -389,7 +389,7 @@
             this.btnBorrar.Location = new System.Drawing.Point(233, 516);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(75, 23);
-            this.btnBorrar.TabIndex = 14;
+            this.btnBorrar.TabIndex = 16;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
@@ -399,7 +399,7 @@
             this.btnCrear.Location = new System.Drawing.Point(31, 516);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(75, 23);
-            this.btnCrear.TabIndex = 12;
+            this.btnCrear.TabIndex = 14;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = true;
             this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace crud_empleado_o_modificar_etc
 {
-    public partial class Form1 : Form
+    public partial class frmBusquedaEmpleado : Form
     {
-        public Form1()
+        public frmBusquedaEmpleado()
         {
             InitializeComponent();
         }
@@ -46,31 +46,39 @@ namespace crud_empleado_o_modificar_etc
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
+            busqueda();
+        }
+        
+        public void busqueda()///metodo para buscar 
+        {
             Operacion op = new Operacion();//haciendo una instancia de la clase
-            
+
             if (rbtnCodEMp.Checked == true)
             {
-                
-                dgvEmpleado.DataSource = op.ConsultaConResultado("SELECT * FROM empleados WhERE cod_empleado = " + txtBuscar.Text );
-            }
-            
-            else if(rbtnNombre.Checked == true)
-            {
-              
-              
-                dgvEmpleado.DataSource = op.ConsultaConResultado("SELECT * FROM  empleados WhERE nombre = " + txtBuscar.Text);
+
+                dgvEmpleado.DataSource = op.ConsultaConResultado("SELECT * FROM empleados WhERE cod_empleado  LIKE '%" + txtBuscar.Text.Trim() + "%'");
             }
 
-            else if (rbtnApellido.Checked  == true)
+            else if (rbtnNombre.Checked == true)
             {
 
-                dgvEmpleado.DataSource = op.ConsultaConResultado("SELECT * FROM empleados WhERE apellido = " + txtBuscar.Text );
+
+                dgvEmpleado.DataSource = op.ConsultaConResultado("SELECT * FROM  empleados WhERE nombre LIKE  '%" + txtBuscar.Text.Trim() + "%'");
             }
 
-            else  if(rbtnCedula.Checked== true )
+            else if (rbtnApellido.Checked == true)
             {
 
-                dgvEmpleado.DataSource = op.ConsultaConResultado("SELECT * FROM empleados WhERE cedula = " + txtBuscar.Text);
+                dgvEmpleado.DataSource = op.ConsultaConResultado("SELECT * FROM  empleados WhERE  apellido LIKE  '%" + txtBuscar.Text.Trim() + "%'");
+            }
+
+            else if (rbtnCedula.Checked == true)
+            {
+                dgvEmpleado.DataSource = op.ConsultaConResultado("SELECT * FROM  empleados WhERE cedula LIKE  '%" + txtBuscar.Text.Trim() + "%'");
+            }
+            else if (txtBuscar.Text.Length == 0)
+            {
+                dgvEmpleado.DataSource = op.ConsultaConResultado("SELECT * FROM  empleados");
             }
         }
 
@@ -88,6 +96,11 @@ namespace crud_empleado_o_modificar_etc
             dgvEmpleado.DataSource = op.ConsultaConResultado("  SELECT * FROM empleados "); 
             
             
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            busqueda();
         }
     }
 }
