@@ -29,8 +29,20 @@ namespace crud_empleado_o_modificar_etc
 
         private void CRUDDetalleNomina_Load(object sender, EventArgs e)
         {
+            
             Operacion oper = new Operacion();
-             dgvEmpleado1.DataSource=   oper.ConsultaConResultado("select * from empleados");
+
+             dgvNomina.DataSource=   oper.ConsultaConResultado("select * from empleados");
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
