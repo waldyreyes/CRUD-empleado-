@@ -82,48 +82,7 @@ namespace crud_empleado_o_modificar_etc
             op.ConsultasSinResultados("insert into detalle_nomina(isr, ss, otros, total_deducciones, sueldo_neto, total_nomina, num_nomina) values('" + Isr + "', '" + Ss + "', '" + Otros + "', '" + Total_deducciones + "', '" + Sueldo_neto + "', '" + txtTotalNomina.Text + "', '" + txtNumeroNomina.Text + "')");
 
 
-            // DataGridViewRow rellenar = dgvNomina.Rows[e.RowIndex];
-
-
-            /*Operacion op = new Operacion();
-            SQLiteConnection conexion  = new SQLiteConnection("Data Source=C:\\SISTEMAS\\nomina.s3db; Version=3;");
-
-            SQLiteCommand agregar = new SQLiteCommand("insert into detalle_nomina (@isr, @ss, @otros, @total_deducciones)", conexion);
-            conexion.Open();
-
-            
-
-            try
-            {
-                foreach (DataGridViewRow row in dgvNomina.Rows)
-                {
-                    op.ConsultasSinResultados("insert into detalle_nomina (isr, ss, otros, total_deducciones, sueldo_neto, num_nomina, total_nomina) value('"+ row.Cells ["Column1"].Value+"', '"+ row.Cells ["Column2"].Value +"', '" +row.Cells ["Column3"].Value+ "', '"+row.Cells["Column4"].Value+"', '"+row.Cells["Column5"]+"', '"+txtNumeroNomina.Text+"', '' )");
-                    agregar.Parameters.Clear();
-
-                    agregar.Parameters.AddWithValue("@isr", row.Cells[1].Value);
-                    agregar.Parameters.AddWithValue("@ss", row.Cells[2].Value);
-                    agregar.Parameters.AddWithValue("@otros", row.Cells[3].Value);
-                    agregar.Parameters.AddWithValue("@total_deducciones",row.Cells[4].Value);
-                   // agregar.Parameters.AddWithValue("@sueldo_neto", row.Cells["Column5"].Value);
-                    // agregar.Parameters.AddWithValue("@num_nomina", txtNumeroNomina.Text;
-                    // agregar.Parameters.AddWithValue("@total_nomina", );
-
-                    agregar.ExecuteNonQuery();
-
-
-                }
-
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("error al agregar ");
-            }
-            finally
-            {
-                conexion.Close();
-            }
-            */
-        }
+         }
 
         public void dgvNomina_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
