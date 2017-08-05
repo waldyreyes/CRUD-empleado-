@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.visorCargo1 = new crud_empleado_o_modificar_etc.visorCargo();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -50,6 +51,7 @@
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "frmReporteCargo";
             this.Text = "frmReporteCargo";
+            this.Load += new System.EventHandler(this.frmReporteCargo_Load);
             this.ResumeLayout(false);
 
         }
@@ -57,5 +59,6 @@
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private visorCargo visorCargo1;
     }
 }

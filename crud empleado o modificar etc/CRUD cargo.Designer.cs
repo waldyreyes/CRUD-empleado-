@@ -108,12 +108,13 @@
             // btnImprimir
             // 
             this.btnImprimir.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimir.Location = new System.Drawing.Point(18, 133);
+            this.btnImprimir.Location = new System.Drawing.Point(18, 136);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(100, 36);
             this.btnImprimir.TabIndex = 21;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnBorrar
             // 

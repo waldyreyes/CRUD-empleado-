@@ -95,5 +95,19 @@ namespace crud_empleado_o_modificar_etc
             txtCodCargo.Text = rellenar.Cells["cod_cargo"].Value.ToString();
             txtNombreCargo.Text = rellenar.Cells["nombre_cargo"].Value.ToString();
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            Operacion oper = new Operacion();
+            DataSet ds = new DataSet();
+
+            DataTable dt = oper.ConsultaConResultado(" SELECT * FROM cargo");
+            ds.Tables.Add(dt);
+
+            ds.WriteXml(@"C:\SISTEMAS\cargo.xml");
+
+            frmReporteCargo be = new frmReporteCargo("visorCargo.rpt");
+            be.Show();
+        }
     }
 }
