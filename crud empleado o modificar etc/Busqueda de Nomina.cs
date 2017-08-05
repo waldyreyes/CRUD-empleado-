@@ -33,5 +33,10 @@ namespace crud_empleado_o_modificar_etc
             Operacion op = new Operacion();
            dgvBusquedaNomina.DataSource = op.ConsultaConResultado(" select cabecera_nomina.num_nomina, cabecera_nomina.fecha_inicio , cabecera_nomina.fecha_final, detalle_nomina.total_deducciones, detalle_nomina.total_nomina, cabecera_nomina.estatus from cabecera_nomina inner join detalle_nomina where cabecera_nomina.num_nomina  = detalle_nomina.num_nomina");
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

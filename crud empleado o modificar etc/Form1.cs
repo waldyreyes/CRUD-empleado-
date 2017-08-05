@@ -102,5 +102,19 @@ namespace crud_empleado_o_modificar_etc
         {
             busqueda();
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            Operacion oper = new Operacion();
+            DataSet ds = new DataSet();
+
+            DataTable dt = oper.ConsultaConResultado(" SELECT * FROM empleados");
+            ds.Tables.Add(dt);
+
+            ds.WriteXml(@"C:\SISTEMAS\empleado.xml");
+
+            frmReporteEmpleado  be = new  frmReporteEmpleado("visorEmpleado.rpt");
+            be.Show();
+        }
     }
 }
