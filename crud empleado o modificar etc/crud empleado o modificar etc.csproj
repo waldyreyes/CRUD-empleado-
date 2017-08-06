@@ -147,6 +147,12 @@
       <DependentUpon>visorCrudEmpleado.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="visorDetalleNomina.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>visorDetalleNomina.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="visorEmpleado.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -202,6 +208,10 @@
     <EmbeddedResource Include="visorCrudEmpleado.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>visorCrudEmpleado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visorDetalleNomina.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>visorDetalleNomina.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="visorEmpleado.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

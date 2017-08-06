@@ -111,5 +111,20 @@ namespace crud_empleado_o_modificar_etc
             }
             
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+
+            Operacion oper = new Operacion();
+            DataSet ds = new DataSet();
+
+            DataTable dt = oper.ConsultaConResultado("select a.nombre, a.apellido, a.cedula, b.nombre_cargo, a.sueldo, (a.sueldo * 0.12) isr, (a.sueldo * 0.04) ss, (a.sueldo * 0.02) otros, ((a.sueldo * 0.12) + (a.sueldo * 0.04) + (a.sueldo * 0.02)) total_deducciones, (a.sueldo - (a.sueldo * 0.12) - (a.sueldo * 0.04) - (a.sueldo * 0.02)) sueldo_neto from empleados a  inner join cargo b where a.cod_cargo = b.cod_cargo");
+            ds.Tables.Add(dt);
+
+            ds.WriteXml(@"C:\SISTEMAS\DetalleNomina.xml");
+
+            frmReporteCargo be = new frmReporteCargo("visorDetalleNomina.rpt");
+            be.Show();
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace crud_empleado_o_modificar_etc
+﻿using System;
+
+namespace crud_empleado_o_modificar_etc
 {
     partial class CRUDDetalleNomina
     {
@@ -31,7 +33,6 @@
             this.components = new System.ComponentModel.Container();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnGenerarNomina = new System.Windows.Forms.Button();
-            this.dgvEmpleado = new System.Windows.Forms.Button();
             this.btnModificarNomina = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.dgvNomina = new System.Windows.Forms.DataGridView();
@@ -50,6 +51,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtTotalNomina = new System.Windows.Forms.TextBox();
             this.txtSS = new System.Windows.Forms.TextBox();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNomina)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -59,8 +61,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btnImprimir);
             this.groupBox4.Controls.Add(this.btnGenerarNomina);
-            this.groupBox4.Controls.Add(this.dgvEmpleado);
             this.groupBox4.Controls.Add(this.btnModificarNomina);
             this.groupBox4.Controls.Add(this.btnBorrar);
             this.groupBox4.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -80,17 +82,6 @@
             this.btnGenerarNomina.TabIndex = 18;
             this.btnGenerarNomina.Text = "Generar Nomina";
             this.btnGenerarNomina.UseVisualStyleBackColor = true;
-            //this.btnGenerarNomina.Click += new System.EventHandler(this.btnGenerarNomina_Click);
-            // 
-            // dgvEmpleado
-            // 
-            this.dgvEmpleado.Font = new System.Drawing.Font("Monotype Corsiva", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvEmpleado.Location = new System.Drawing.Point(18, 336);
-            this.dgvEmpleado.Name = "dgvEmpleado";
-            this.dgvEmpleado.Size = new System.Drawing.Size(140, 36);
-            this.dgvEmpleado.TabIndex = 21;
-            this.dgvEmpleado.Text = "Imprimir";
-            this.dgvEmpleado.UseVisualStyleBackColor = true;
             // 
             // btnModificarNomina
             // 
@@ -248,6 +239,17 @@
             this.txtSS.Size = new System.Drawing.Size(100, 20);
             this.txtSS.TabIndex = 34;
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Enabled = false;
+            this.btnImprimir.Location = new System.Drawing.Point(42, 319);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(140, 37);
+            this.btnImprimir.TabIndex = 21;
+            this.btnImprimir.Text = "Imprimir ";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
             // CRUDDetalleNomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,10 +279,14 @@
 
         }
 
+        private void dgvEmpleado_Click(object sender, EventArgs e)
+        {
+            
+        }
+
         #endregion
         private System.Windows.Forms.GroupBox groupBox4;
         public System.Windows.Forms.Button btnGenerarNomina;
-        public System.Windows.Forms.Button dgvEmpleado;
         public System.Windows.Forms.Button btnModificarNomina;
         public System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -299,5 +305,6 @@
         private System.Windows.Forms.TextBox txtTotalNomina;
         private System.Windows.Forms.TextBox txtSS;
         public System.Windows.Forms.DataGridView dgvNomina;
+        public System.Windows.Forms.Button btnImprimir;
     }
 }
