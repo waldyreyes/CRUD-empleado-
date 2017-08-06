@@ -106,11 +106,23 @@
     <Compile Include="frmReporteCargo.Designer.cs">
       <DependentUpon>frmReporteCargo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReporteCrudEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteCrudEmpleado.Designer.cs">
+      <DependentUpon>frmReporteCrudEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReporteEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmReporteEmpleado.Designer.cs">
       <DependentUpon>frmReporteEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteNomina.Designer.cs">
+      <DependentUpon>frmReporteNomina.cs</DependentUpon>
     </Compile>
     <Compile Include="Operacion.cs" />
     <Compile Include="Principal.cs">
@@ -127,12 +139,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>visorCargo.rpt</DependentUpon>
       <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="visorCrudEmpleado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>visorCrudEmpleado.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="visorEmpleado.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>visorEmpleado.rpt</DependentUpon>
       <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <EmbeddedResource Include="Busqueda de Nomina.resx">
       <DependentUpon>Busqueda de Nomina.cs</DependentUpon>
@@ -152,8 +172,14 @@
     <EmbeddedResource Include="frmReporteCargo.resx">
       <DependentUpon>frmReporteCargo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteCrudEmpleado.resx">
+      <DependentUpon>frmReporteCrudEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReporteEmpleado.resx">
       <DependentUpon>frmReporteEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteNomina.resx">
+      <DependentUpon>frmReporteNomina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -171,10 +197,16 @@
     <EmbeddedResource Include="visorCargo.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>visorCargo.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visorCrudEmpleado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>visorCrudEmpleado.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="visorEmpleado.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>visorEmpleado.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -110,10 +110,11 @@ namespace crud_empleado_o_modificar_etc
 
             DataTable dt = oper.ConsultaConResultado(" SELECT * FROM empleados");
             ds.Tables.Add(dt);
+           // ds.Tables[0].TableName = "empleados";
 
             ds.WriteXml(@"C:\SISTEMAS\empleado.xml");
 
-            frmReporteEmpleado  be = new  frmReporteEmpleado("visorEmpleado.rpt");
+            frmReporteEmpleado  be = new  frmReporteEmpleado();
             be.Show();
         }
     }

@@ -11,16 +11,16 @@ using System.Windows.Forms;
 
 namespace crud_empleado_o_modificar_etc
 {
-    public partial class frmReporteEmpleado : Form
+    public partial class frmReporteCrudEmpleado : Form
     {
-        public frmReporteEmpleado()
+        public frmReporteCrudEmpleado(string a)
         {
             
             try
             {
                 InitializeComponent();
                 ReportDocument cryRpt = new ReportDocument();
-                cryRpt.Load(@"C:\Users\DELL\Documents\Visual Studio 2017\Projects\crud empleado o modificar etc\crud empleado o modificar etc\visorEmpleado.rpt");
+                cryRpt.Load(@"C:\Users\DELL\Documents\Visual Studio 2017\Projects\crud empleado o modificar etc\crud empleado o modificar etc\visorCrudEmpleado.rpt");
 
                 //cryRpt.Load(nombre_reporte);
                 crystalReportViewer1.ReportSource = cryRpt;
@@ -32,7 +32,7 @@ namespace crud_empleado_o_modificar_etc
             }
         }
 
-        private void frmReporteEmpleado_Load(object sender, EventArgs e)
+        private void frmReporteCrudEmpleado_Load(object sender, EventArgs e)
         {
 
         }

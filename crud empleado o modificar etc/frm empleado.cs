@@ -258,5 +258,19 @@ namespace crud_empleado_o_modificar_etc
                 btnBorrar.Enabled = true;
             }*/
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            Operacion oper = new Operacion();
+            DataSet ds = new DataSet();
+
+            DataTable dt = oper.ConsultaConResultado(" select cod_empleado, cedula, nombre, apellido, sexo, direccion, fecha_nacimiento, fecha_ingreso, sueldo from empleados ");
+            ds.Tables.Add(dt);
+
+            ds.WriteXml(@"C:\SISTEMAS\crudEmpleado.xml");
+
+            frmReporteCrudEmpleado be = new frmReporteCrudEmpleado ("visorCrudEmpleado.rpt");
+            be.Show();
+        }
     }
 }

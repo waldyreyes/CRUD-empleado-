@@ -17,7 +17,6 @@ namespace crud_empleado_o_modificar_etc
 
         public frmReporteCargo(string nombre_reporte)
         {
-            InitializeComponent();
             try
             {
                 InitializeComponent();
